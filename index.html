@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./src/main.css">
+
+    <title>IHM</title>
+</head>
+<body class="min-h-screen">
+    <header class="w-full flex justify-between bg-secondary min-h-[144px]">
+        <div class="flex-1 flex items-center">
+            <img class="h-28 cursor-pointer" src="./assets/roverLogo.png" alt="">
+            <div>
+                <h1 class="text-primary text-5xl font-bold">MGBD Parts & Services</h1>
+                <h3 class="text-primary text-xl font-normal">Rover P6 parts specialist</h3>
+            </div>
+        </div>
+        <div class="flex flex-col items-center pt-4 px-2 space-y-2">
+            <div class="w-12 relative">
+                <span class="absolute top-0 -right-1 text-center pt-1 rounded-full bg-primary text-white leading-4 font-medium inline-block w-6 h-6">2</span>
+                <img src="./assets/cart.png" alt="">
+            </div>
+            <div class="w-12">
+                <img src="./assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+    <nav class="flex justify-between sm:justify-center px-8 py-4 sticky -top-px bg-primary z-20">
+        <ul class="hidden sm:flex justify-center flex-wrap space-x-4">
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">home</a>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">webstore</a>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium mega relative">
+                <a href="" class="hover:underline">technical</a>
+                </div>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">news</a>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">gallery</a>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">contact</a>
+            </li>
+            <li class="text-white uppercase text-2xl font-medium">
+                <a href="" class="hover:underline">about</a>
+            </li>
+        </ul>
+        
+        <span class="sm:hidden flex flex-col justify-center items-center h-8 w-10 space-y-1">
+            <span class="inline-block bg-white rounded h-2 min-w-full"></span>
+            <span class="inline-block bg-white rounded h-2 w-full"></span>
+            <span class="inline-block bg-white rounded h-2 w-full"></span>
+        </span>
+
+        <ol class="hidden space-x-3">
+            <a>
+                <img src="./assets/search.png" alt="" class="h-8">
+            </a>
+            <a>
+                <img src="./assets/userInverse.png" alt="" class="h-8">
+            </a>
+            <a>
+                <img src="./assets/cartInverse.png" alt="" class="h-8">
+            </a>
+        </ol>
+    </nav>
+    <!-- Slider -->
+    <section class="carousel w-full bg-slate-700 relative" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide"
+              >
+              <img src="./assets/Rover-P6-8.jpg" alt="" class="w-full h-full object-cover no-filter transition-opacity absolute top-0 right-0">
+              <img src="./assets/Rover-P6-8.png" alt="" class="w-full h-full object-cover blue-filter transition-opacity absolute top-0 right-0">
+            <div class="carousel__snapper">
+              <a href="#carousel__slide2"
+                 class="carousel__next"></a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev"></a>
+            <a href="#carousel__slide3"
+               class="carousel__next"></a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+               class="carousel__prev"></a>
+            <a href="#carousel__slide4"
+               class="carousel__next"></a>
+          </li>
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+               class="carousel__prev"></a>
+          </li>
+        </ol>
+        <!-- Indicators -->
+        <div class="absolute bottom-8 left-5 flex space-x-1">
+            <a href="#carousel__slide1" class="w-3 h-3 bg-white rounded-full bg-opacity-70 active:bg-opacity-100"></a>
+            <a href="#carousel__slide2" class="w-3 h-3 bg-white rounded-full bg-opacity-70 active:bg-opacity-100"></a>
+            <a href="#carousel__slide3" class="w-3 h-3 bg-white rounded-full bg-opacity-70 active:bg-opacity-100"></a>
+            <a href="#carousel__slide4" class="w-3 h-3 bg-white rounded-full bg-opacity-70 active:bg-opacity-100"></a>
+        </div>
+        <!-- Buttons -->
+        <div class="absolute bottom-5 right-3 flex space-x-1">
+            <button class="bg-white bg-opacity-75 hover:bg-opacity-100 py-2 px-4 border focus:outline-none">
+                <img src="./assets/back.png" alt="" class="w-5 h-5">
+            </button>
+            <button class="bg-white bg-opacity-75 hover:bg-opacity-100 py-2 px-4 border focus:outline-none">
+                <img src="./assets/next.png" alt="" class="w-5 h-5">
+            </button>
+        </div>
+    </section>
+    <main class="min-h-screen">
+        <!-- Cards -->
+        <div class="w-full flex flex-col sm:flex-row my-14 space-y-8 sm:space-y-0">
+            <div class="w-full sm:w-1/2 flex flex-col justify-center items-center space-y-6">
+                <img class="w-24" src="./assets/experience.png" alt="">
+                <p class="text-2xl text-center text-primary font-medium">
+                    We have over 32 years experience of
+                    <br>
+                    owning, repairing, restoring and running
+                    <br>
+                    Rover P6 cars in all variants 
+                </p>
+            </div>
+            <div class="w-full sm:w-1/2 flex flex-col justify-center items-center space-y-6">
+                <img class="w-24" src="./assets/brake-disc.png" alt="">
+                <p class="text-2xl text-center text-primary font-medium">
+                    Offering services, Rover P6 parts
+                    <br>
+                    specialists. new, used and refurbished
+                    <br>
+                    parts.
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="w-full my-16 px-5">
+            <span class="inline-block pb-8 w-full text-center text-4xl text-primary font-normal uppercase">shop by category</span>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-14">
+                <div class="w-full mx-auto">
+                    <a href="" class="block bg-secondary hover:bg-primary text-primary hover:text-white transition-colors duration-300 ease-in-out" style="aspect-ratio: 570/528;padding-bottom: 9%;">
+                        <span class="text-6xl font-extrabold uppercase pl-4 pt-6 pb-2 inline-block">new <br> parts</span>
+                        <img src="./assets/new.png" alt="" class="object-cover w-full" style="aspect-ratio: 570/291;">
+                    </a>
+                </div>
+                <div class="w-full mx-auto">
+                    <a href="" class="block bg-secondary hover:bg-primary text-primary hover:text-white transition-colors duration-300 ease-in-out" style="aspect-ratio: 570/528;padding-bottom: 9%;">
+                        <span class="text-6xl font-extrabold uppercase pl-4 pt-6 pb-2 inline-block">used <br> parts</span>
+                        <img src="./assets/used.png" alt="" class="object-cover w-full" style="aspect-ratio: 570/291;">
+                    </a>
+                </div>
+                <div class="w-full mx-auto">
+                    <a href="" class="block bg-secondary hover:bg-primary text-primary hover:text-white transition-colors duration-300 ease-in-out" style="aspect-ratio: 570/528;padding-bottom: 9%;">
+                        <span class="text-6xl font-extrabold uppercase pl-4 pt-6 pb-2 inline-block break-all">REFURBISHED <br> parts</span>
+                        <img src="./assets/refurshbished.png" alt="" class="object-cover w-full" style="aspect-ratio: 570/291;">
+                    </a>
+                </div>
+            </div>
+            <span class="inline-block w-full py-2 text-primary text-2xl text-center lg:text-right">
+                <a href="">All categories</a>
+            </span>
+        </div>
+
+        <!-- Contacts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-16 mb-4 bg-light py-28 relative">
+            <div class="bg-red-400 absolute bg-no-repeat bg-cover z-0" style="background-image: url('./assets/map.png');width: calc(100% - 100px);height: calc(100% - 120px);margin: 60px 0px 60px 100px;">
+
+            </div>
+            <!-- Newsletter Form -->
+            <div class="bg-secondary bg-opacity-75 flex flex-col items-center py-14 z-10">
+                <span class="text-primary text-3xl font-medium uppercase">find us at</span>
+                <p class="text-primary text-2xl text-opacity-80 font-normal px-12 py-5">UNIT 1, Ashford Industrial Estate, Wolverhampton WV2 2BX, United Kingdom</p>
+                <div class="px-12 mt-2 mb-12 self-start max-w-full">
+                    <div class="text-primary text-2xl text-opacity-80 font-normal w-96 max-w-full flex flex-wrap justify-between">
+                        <span>Monday - Friday</span>
+                        <span>09:00 to 17:00</span>
+                    </div>
+                    <div class="text-primary text-2xl text-opacity-80 font-normal w-96 max-w-full flex flex-wrap justify-between">
+                        <span>Saturday</span>
+                        <span>10:00 to 13:00</span>
+                    </div>
+                </div>
+                <span class="text-primary text-3xl font-medium uppercase">stay in touch</span>
+                <div class="px-6 my-2 flex w-full space-x-3">
+                    <input type="text" class="flex-1 text-base py-1 text-primary text-center placeholder:text-primary placeholder:text-opacity-50 bg-[#FAFAFA] focus:border-primary focus:outline-none border border-transparent rounded-full" placeholder="your email address">
+                    <button class="text-primary text-base font-medium capitalize focus:border-primary border border-transparent rounded-full px-6 py-1 bg-secondary">join</button>
+                </div>
+            </div>
+            <!-- Map -->
+            <div></div>
+        </div>
+
+    </main>
+    <footer class="w-full bg-secondary">
+        <section class="grid grid-cols-1 lg:grid-cols-4 py-8 gap-8 lg:gap-0">
+            <div class="col-span-1 px-8 flex flex-col items-start">
+                <span class="inline-block w-full text-2xl -mt-3 text-primary font-semibold text-center">Menu</span>
+                <ul class="flex flex-col items-star pt-3">
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">home</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">webstore</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">technical</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">news</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">gallery</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">contact</a>
+                    </li>
+                    <li class="text-primary uppercase text-xl text-opacity-60 font-medium">
+                        <a href="" class="hover:underline">about</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1 lg:col-span-2 px-8 flex flex-col items-start lg:border border-transparent border-l-primary border-r-primary">
+                <span class="inline-block w-full text-2xl -mt-3 text-primary font-semibold text-center">Having problems sourcing parts for other than Rover P6?</span>
+                <span class="inline-block w-full text-primary text-xl text-opacity-60 font-medium pt-3 text-center">Contact us at <a href="mailto:nonp6parts@roverp6cars.co.uk" class="hover:underline">nonp6parts@roverp6cars.co.uk</a></span>
+            </div>
+            <div class="col-span-1 px-8 flex flex-col items-start">
+                <span class="inline-block w-full text-2xl -mt-3 text-primary font-semibold text-center">Contact</span>
+                <span class="flex items-center space-x-4 w-full text-primary text-xl text-opacity-60 font-medium pt-3">
+                    <img src="./assets/email.png" alt="" class="h-6">
+                    <a href="mailto:sales@mgbdparts.co.uk" class="text-primary text-xl text-opacity-60 font-medium">sales@mgbdparts.co.uk</a>
+                </span>
+                <span class="flex items-center space-x-4 w-full text-primary text-xl text-opacity-60 font-medium pt-3">
+                    <img src="./assets/telephone.png" alt="" class="h-6">
+                    <a href="tel:+441902689975" class="text-primary text-xl text-opacity-60 font-medium">+44 1902 689975</a>
+                </span>
+                <span class="flex items-center space-x-4 w-full text-primary text-xl text-opacity-60 font-medium pt-3">
+                    <img src="./assets/facebook.png" alt="" class="h-6">
+                    <a href="" class="text-primary text-xl text-opacity-60 font-medium">MGBD parts&services</a>
+                </span>
+            </div>
+        </section>
+        <ul class="px-8 py-2 bg-primary flex w-full justify-between">
+            <li class="text-white text-lg font-medium">
+                <a href="">Terms and Conditions</a>
+            </li>
+            <li class="text-white text-lg font-medium">
+                <a href="">MGBD PARTS & SERVICES</a>
+            </li>
+            <li class="text-white text-lg font-medium">&copy;2022 MAKNI Samer</li>
+        </ul>
+    </footer>
+
+    <!-- main js -->
+    <script src="./src/main.js"></script>
+</body>
+</html>
